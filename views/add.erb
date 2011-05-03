@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title><%= @title + ' &#8211; PDX Suds Society' %></title>
         <link rel="stylesheet" href="/css/960.css" />
-        <link rel="stylesheet" href=/css/reset.css" />
+        <link rel="stylesheet" href="/css/reset.css" />
         <link rel="stylesheet" href="/css/text.css" />
         <link rel="stylesheet" href="/css/style.css"/>
         <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis+Light' rel='stylesheet' type='text/css'>
@@ -12,30 +12,35 @@
 </head>
 <body>
         <div class="container_12" id="wrapper">
-                <div class="grid12 alpha omega" id="header">
+                <div class="grid12" id="header">
                         <h1>PDX SUDS SOCIETY</h1>
                         <h2>Celibrating Portland's Grand Beer Tradition</h2>
                         <ul id="nav">
-                                <li><a href="#" id="current_page">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li>/</li>
                                 <li><a href="/listing">Listings</a></li>
                                 <li>/</li>
-                                <li><a href="/add">Add a Review</a></li>
+                                <li><a href="/add" id="current_page">Add a Review</a></li>
                         </ul>
                 </div>
-                <div class="grid_8 alpha" id="main">
-                	<h3>Most Recent Updates To Our Listings</h3>
-                </div>
-                <div class="grid_4 omega" id="sponsored">
-			<h3>Sponsors</h3>
-                </div>
-		<div class="grid_12 alpha omega" id="specials">
-			
+                <div class="grid_8" id="main">
+			<form>
+				<label for="location">Select A Location To Review</label>
+				<select>
+					<option>----------</option>
+				</select><br />
+				<textarea rows="20" cols="80">Enter your review here...</textarea><br />
+				<input type="submit" value="Submit Your Review" />
+			</form>	
 		</div>
-                <div class="grid_12 alpha omega" id="footer">
+                <div class="grid_4" id="sponsored">
+                        <h3>Recent Reviews</h3>
+                </div>
+		<div class="grid_12" id="footer">
                         <p>&#169; 2011 PDX Suds Society</p>
                         <a href="mailto:pdxsudssociety@gmail.com">Contact Us</a>
                 </div>
-        </div>
+	</div>
 </body>
+</html>
 

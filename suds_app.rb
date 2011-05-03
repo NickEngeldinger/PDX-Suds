@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'datamapper'
 
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/pdxxx_society.db")
+DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/suds.db")
 
 
 class Bar
@@ -55,3 +55,17 @@ get '/' do
         erb :home
 end
 
+get '/add' do
+	@title = "Add a Review"
+	erb :add
+end
+
+get '/listing' do
+	@title = "Listings"
+	erb :listing
+end
+
+not_found do
+	@title = "Page Not Found"
+	erb :page404
+end
