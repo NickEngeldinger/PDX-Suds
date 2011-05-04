@@ -24,12 +24,18 @@
                         </ul>
                 </div>
                 <div class="grid_8" id="main">
-			<form>
-				<label for="location">Select A Location To Review</label>
-				<select>
-					<option>----------</option>
+			<form action="/add" method="post">
+				<label for="ReviewTitle">Title:</label>
+				<input type="text" name="ReviewTitle" />
+				<textarea name="ReviewText" rows="20" cols="80">Enter your review here...</textarea><br />
+				<label for="Rating">Rating:</label>
+				<select name="Rating">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
 				</select><br />
-				<textarea rows="20" cols="80">Enter your review here...</textarea><br />
 				<input type="submit" value="Submit Your Review" />
 			</form>	
 		</div>

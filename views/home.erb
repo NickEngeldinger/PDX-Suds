@@ -25,6 +25,13 @@
                 </div>
                 <div class="grid_8 alpha" id="main">
                 	<h3>Most Recent Updates To Our Listings</h3>
+			<% @reviews.each do |review| %>
+                                <h4><%= review.ReviewTitle %>
+                                <h5><%= review.Rating %>
+				<p><%= review.ReviewText %>
+				<p><%= review.ReviewDate %>
+                		<hr />
+		        <% end %>
                 </div>
                 <div class="grid_4 omega" id="sponsored">
 			<h3>Sponsors</h3>

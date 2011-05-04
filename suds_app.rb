@@ -50,7 +50,7 @@ end
 DataMapper.finalize.auto_upgrade!
 
 get '/' do
-        @bars = Bar.all :order => :BarId.desc
+        @reviews = Reviews.all :order => :ReviewId.desc
         @title = 'Home'
         erb :home
 end
@@ -59,6 +59,16 @@ get '/add' do
 	@title = "Add a Review"
 	erb :add
 end
+
+post '/add' do
+	r = Reviews.new
+	r.ReviewTitle = params[:ReviewTitle]
+	r.ReviewText = params[:ReviewText]
+	r.Rating = params[:Rating]
+	r.ReviewDate = Time.now
+	r.save
+	redirect '/'
+end	
 
 get '/listing' do
 	@title = "Listings"

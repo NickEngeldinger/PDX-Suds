@@ -27,6 +27,7 @@ body {
 }
 
 h1 {
+	font-family: 'Allan', arial, serif;
 	color: #00b4ff;
 	font-size: 80px;
 	text-align: center;
@@ -35,6 +36,7 @@ h1 {
 h2 {
 	color: #eee;
 	text-align: center;
+	font-family: 'Terminal Dosis Light', arial, serif;
 }
 
 h3 {
@@ -42,6 +44,7 @@ h3 {
 	border-radius: 10px 10px 0px 0px;
 	color: #eee;
 	margin-top: 0;
+	font-family: 'Allan', arial, serif;
 }
 
 ul#nav {
@@ -53,12 +56,14 @@ ul#nav li {
 	color: #eee;
 	float: left;
 	font-size: 32px;
+	font-family: 'Allan', arial, serif;
 }
 
 ul#nav li a {
 	color: #eee;
 	font-size: 32px;
 	text-decoration: none;
+	font-family: 'Allan', arial, serif;
 }
 
 ul#nav li a:hover {

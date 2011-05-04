@@ -24,7 +24,13 @@
                         </ul>
                 </div>
                 <div class="grid_8 alpha" id="main">
-                
+		<% @reviews.each do |review| %>
+                         <h4><%= review.ReviewTitle %>
+                         <h5><%= review.Rating %>
+                         <p><%= review.ReviewText %>
+                         <p><%= review.ReviewDate %>
+        		<hr />         
+	       <% end %>
                 </div>
 	</div>
 	<div class="grid_12 alpha omega" id="footer">
