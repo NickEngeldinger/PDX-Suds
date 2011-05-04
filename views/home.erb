@@ -26,9 +26,9 @@
                 <div class="grid_8 alpha" id="main">
                 	<h3>Most Recent Updates To Our Listings</h3>
 			<% @reviews.each do |review| %>
-                                <h4><%= review.ReviewTitle %>
+                                <h4><%=h review.ReviewTitle %>
                                 <h5><%= review.Rating %>
-				<p><%= review.ReviewText %>
+				<p><%=h review.ReviewText %>
 				<p><%= review.ReviewDate %>
                 		<hr />
 		        <% end %>

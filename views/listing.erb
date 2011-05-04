@@ -25,9 +25,9 @@
                 </div>
                 <div class="grid_8 alpha" id="main">
 		<% @reviews.each do |review| %>
-                         <h4><%= review.ReviewTitle %>
+                         <h4><%=h review.ReviewTitle %>
                          <h5><%= review.Rating %>
-                         <p><%= review.ReviewText %>
+                         <p><%=h review.ReviewText %>
                          <p><%= review.ReviewDate %>
         		<hr />         
 	       <% end %>

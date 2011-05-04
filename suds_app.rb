@@ -49,6 +49,11 @@ end
 
 DataMapper.finalize.auto_upgrade!
 
+helpers do  
+        include Rack::Utils  
+        alias_method :h, :escape_html  
+end  
+
 get '/' do
         @reviews = Reviews.all :order => :ReviewId.desc
         @title = 'Home'
@@ -71,6 +76,7 @@ post '/add' do
 end	
 
 get '/listing' do
+	@reviews = Reviews.all :order => :ReviewId.desc
 	@title = "Listings"
 	erb :listing
 end
