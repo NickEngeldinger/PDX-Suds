@@ -24,6 +24,7 @@
                         </ul>
                 </div>
                 <div class="grid_8" id="main">
+			<h3>Add A Review</h3>
 			<form action="/add" method="post">
 				<label for="ReviewTitle">Title:</label>
 				<input type="text" name="ReviewTitle" />
@@ -40,7 +41,14 @@
 			</form>	
 		</div>
                 <div class="grid_4" id="sponsored">
-                        <h3>Recent Reviews</h3>
+                        <h3>Add A Sponsor</h3>
+			<form action="/add" method="post">
+				<label for="SponsTitle">Title:</label><br />
+				<input type="text" name="SponsTitle" />
+				<label for="SponsText">Text:</label><br />
+				<textarea cols="10" rows="20" name="SponsText"></textarea>
+				<input type="submit" value="Submit Sponsor" />
+			</form>
                 </div>
 		<div class="grid_12" id="footer">
                         <p>&#169; 2011 PDX Suds Society</p>

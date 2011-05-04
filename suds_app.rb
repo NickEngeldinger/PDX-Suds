@@ -56,7 +56,8 @@ end
 
 get '/' do
         @reviews = Reviews.all :order => :ReviewId.desc
-        @title = 'Home'
+        @sponsors = Sponsored.all :order => :SponsId.desc
+	@title = 'Home'
         erb :home
 end
 
@@ -72,6 +73,12 @@ post '/add' do
 	r.Rating = params[:Rating]
 	r.ReviewDate = Time.now
 	r.save
+	redirect '/'
+
+	s = Sponsored.new
+	s.SponsTitle = params[:SponsTitle]
+	s.SponsText = params[:SponsText]
+	s.save
 	redirect '/'
 end	
 
